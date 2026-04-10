@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: postgresql-service
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
 spec:
   selector:
     app: postgresql
